@@ -18,11 +18,11 @@ The proposed solution will provide a cost-effective, lightweight, and scalable t
 * The system will ensure data consistency, security, and availability across distributed environments. 
 * It will use modern cloud technologies to achieve scalability, persistence, and resilience.
 * The project focuses on achieving the following specific goals:
-Develop a user-friendly web application for inventory management with role-based access control for managers and staff.
-* Implement a robust backend service to handle inventory operations and ensure data persistence using PostgreSQL with volumes.
-* Deploy the application to a cloud provider with full containerization and orchestration support.
-* Integrate monitoring and automated alerts to ensure system stability and performance.
-* Demonstrate the use of at least two advanced cloud features such as real-time updates and serverless automation.
+    * Develop a user-friendly web application for inventory management with role-based access control for managers and staff.
+    * Implement a robust backend service to handle inventory operations and ensure data persistence using PostgreSQL with volumes.
+    * Deploy the application to a cloud provider with full containerization and orchestration support.
+    * Integrate monitoring and automated alerts to ensure system stability and performance.
+    * Demonstrate the use of at least two advanced cloud features such as real-time updates and serverless automation.
 
 
 ### Core Features
@@ -54,8 +54,8 @@ Develop a user-friendly web application for inventory management with role-based
 * The Fly.io function just calls sendgrid API with any SMTP setup or DNS headaches.
 #### Serverless Integration
 * **Fly.io Functions** will be used to send automated email alerts when item quantities fall below a specified threshold. This ensures that managers are promptly informed about low inventory levels. 
-* This function will act like serverless since a separate lightweight python or node.js application will be configured to listen to the REST api call and simply send the notification. 
-* The app will be configured so that it automatically scales to 0 when not in use. 
+* This function will act like serverless since a separate lightweight python or node.js application will be configured to listen to the REST api call and simply send the email notification. 
+* The app will be configured so that it automatically scales to 0 when not in use there by acting serverless.
 #### CI/CD pipelines
 The project will implement a continuous integration and continuous deployment (CI/CD) pipeline using **GitHub Actions**. Each commit or pull request will trigger automated workflows that:
 * Run unit tests to ensure code quality before merging.
@@ -123,7 +123,7 @@ This project will have three tables - users, items & transactions.
 * Help design backend APIs related to transaction logging and alert triggers.
 * Contribute to testing real-time event flow between backend and frontend.
 * If time permits, assist with Kubernetes setup for service scaling.
-* If time permits, implement PostgreSQL automated backups and HTTPS enforcement.
+* If time permits, implement PostgreSQL automated backups.
 
 ### Member 3 - Zhao Ji Wang
 * Write Dockerfiles for backend, frontend, and PostgreSQL containers.
@@ -132,7 +132,7 @@ This project will have three tables - users, items & transactions.
 * Deploy the full system to Fly.io with persistent storage and global edge setup.
 * Configure Fly.io health monitoring (CPU, memory, disk) and automated alerts.
 * Implement GitHub Actions pipelines for CI/CD — automated testing, build, and deployment.
-* If time permits, secure configuration using Fly.io Secrets Manager and ensure HTTPS.
+* If time permits, secure configuration using Fly.io Secrets Manager and HTTPS enforcement.
 
 ### Shared / Collaborative Tasks
 All the team memebers are expected to follow and help with the following tasks:
